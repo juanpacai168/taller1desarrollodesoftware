@@ -28,6 +28,7 @@
     tbody td a:hover {
       text-decoration: underline;
     }
+
     .average-row {
       font-weight: normal !important;
     }
@@ -43,23 +44,40 @@
         </h3>
       </div>
       <div class="card-body">
-        <div class="table-responsive">
-          <table class="table table-hover bg-light">
-            <thead class="bg-white text-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Channel</th>
-                <th scope="col">Seasons</th>
-              </tr>
-            </thead>
-            <tbody id="series">
-            </tbody>
-          </table>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="table-responsive">
+              <table class="table table-hover bg-light">
+                <thead class="bg-white text-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Channel</th>
+                    <th scope="col">Seasons</th>
+                  </tr>
+                </thead>
+                <tbody id="series">
+                </tbody>
+              </table>
+              <p id="average"></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" id="series-detail" style="display: none;">
+              <img id="series-img" src="" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title" id="series-title"></h5>
+                <p class="card-text" id="series-desc"></p>
+                <a id="series-link" href="#" target="_blank" class="card-link text-primary" style="text-decoration: underline;"></a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
+
   <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
